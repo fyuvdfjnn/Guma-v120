@@ -1,3 +1,27 @@
+#root {
+  min-height: 100vh;
+}
+
+.mobile-viewport {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 0 24px;
+  background: #05050a;
+}
+
+.mobile-canvas {
+  width: 390px;
+  min-height: 844px;
+  overflow: visible;
+  transform: scale(var(--mobile-scale, 1));
+  transform-origin: top center;
+}
+
 :root {
   color: #ffffff;
   background: #05050a;
