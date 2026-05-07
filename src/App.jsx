@@ -1137,7 +1137,6 @@ function ProductLinkPage({ mode, productImage, modelImage, sampleFilled, onBack,
             <>
               <div className="product-link-copy">
                 <strong>补充产品卖点</strong>
-                <p>没有上传链接，直接补充产品的核心卖点和使用场景等</p>
               </div>
               <div className="product-link-textarea">
                 防晒透气、轻量包裹、适合日常通勤与运动穿搭，突出高级质感和上脚舒适感
@@ -1149,8 +1148,8 @@ function ProductLinkPage({ mode, productImage, modelImage, sampleFilled, onBack,
             <>
               <div className="product-link-link-tab">
                 <div className="product-link-link-copy">
-                  <strong>Share your product link<br />to generate a script</strong>
-                  <p>Supports:</p>
+                  <strong>上传商品链接生成专属文案</strong>
+                  
                 </div>
 
                 <div className="product-link-platform-row">
@@ -1179,7 +1178,7 @@ function ProductLinkPage({ mode, productImage, modelImage, sampleFilled, onBack,
                   )}
                 </div>
 
-                <p className="product-link-link-hint">*Provide url for the same product just uploaded.</p>
+                <p className="product-link-link-hint">*提供刚上传的同款产品链接</p>
               </div>
 
               <button className="product-link-submit" onClick={onSubmit} type="button">继续生成</button>
@@ -1315,7 +1314,7 @@ function EcommerceReplaceSheet({ type, presets, onClose, onFromCamera, onFromPho
         <div className="ecommerce-replace-actions">
           <button className="ecommerce-replace-action" onClick={onFromCamera} type="button">
             <Icon type="camera" />
-            <span>拍照导入</span>
+            <span>拍照</span>
           </button>
           <button className="ecommerce-replace-action" onClick={onFromPhoto} type="button">
             <Icon type="image" />
@@ -1323,7 +1322,7 @@ function EcommerceReplaceSheet({ type, presets, onClose, onFromCamera, onFromPho
           </button>
         </div>
 
-        <div className="ecommerce-replace-title">预设图片</div>
+        <div className="ecommerce-replace-title">素材图</div>
 
         <div className="ecommerce-replace-grid">
           {presets.map((item) => (
@@ -1485,7 +1484,7 @@ function PosterUploadSheet({ onClose, onFromCamera, onFromPhoto }) {  return (
       <div className="poster-upload-sheet" role="dialog" aria-modal="true" aria-label="上传建议">
         <div className="poster-upload-sheet-handle"></div>
         <header className="poster-upload-sheet-header">
-          <h2>Upload suggestions</h2>
+          <h2>上传建议</h2>
           <button className="poster-upload-sheet-close" onClick={onClose} type="button" aria-label="关闭">
             <Icon type="close" />
           </button>
@@ -1494,16 +1493,16 @@ function PosterUploadSheet({ onClose, onFromCamera, onFromPhoto }) {  return (
         <section className="poster-upload-sheet-section">
           <div className="poster-upload-sheet-title good">
             <span>✓</span>
-            <strong>Good photo example</strong>
+            <strong>正确示范</strong>
           </div>
           <div className="poster-upload-sheet-good-card">
             <div className="poster-upload-sheet-good-image">
               <img src={productPosterImages[1]} alt="Good photo example" />
             </div>
             <div className="poster-upload-sheet-good-points">
-              <p>✓ Single product</p>
-              <p>✓ Clean background</p>
-              <p>✓ Full product shot</p>
+              <p>✓ 单一产品</p>
+              <p>✓ 干净背景</p>
+              <p>✓ 完整展示</p>
             </div>
           </div>
         </section>
@@ -1511,13 +1510,13 @@ function PosterUploadSheet({ onClose, onFromCamera, onFromPhoto }) {  return (
         <section className="poster-upload-sheet-section bad-section">
           <div className="poster-upload-sheet-title bad">
             <span>✕</span>
-            <strong>Bad photo examples</strong>
+            <strong>错误示范</strong>
           </div>
           <div className="poster-upload-sheet-bad-grid">
             {[
-              { src: ecommercePromoImages[0], label: 'Mutiple items' },
-              { src: heroImages[0], label: 'With model' },
-              { src: productPosterImages[3], label: 'Incomplete' },
+              { src: ecommercePromoImages[0], label: '多物体' },
+              { src: heroImages[0], label: '手持' },
+              { src: productPosterImages[3], label: '遮挡' },
             ].map((item) => (
               <div className="poster-upload-sheet-bad-card" key={item.label}>
                 <img src={item.src} alt={item.label} />
@@ -1530,7 +1529,7 @@ function PosterUploadSheet({ onClose, onFromCamera, onFromPhoto }) {  return (
         <div className="poster-upload-sheet-actions">
           <button className="poster-upload-sheet-action" onClick={onFromCamera} type="button">
             <Icon type="camera" />
-            <span>拍照导入</span>
+            <span>拍照</span>
           </button>
           <button className="poster-upload-sheet-action" onClick={onFromPhoto} type="button">
             <Icon type="image" />
