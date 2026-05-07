@@ -1139,7 +1139,7 @@ function ProductLinkPage({ mode, productImage, modelImage, sampleFilled, onBack,
                 <strong>补充产品卖点</strong>
               </div>
               <div className="product-link-textarea">
-                防晒透气、轻量包裹、适合日常通勤与运动穿搭，突出高级质感和上脚舒适感
+                防晒透气、轻量包裹、适合日常通勤与运动穿搭，突出高级质感
               </div>
               <button className="product-link-secondary" onClick={onSwitchToLink} type="button">返回上传产品链接</button>
               <button className="product-link-submit" onClick={onSubmit} type="button">继续生成</button>
@@ -1395,8 +1395,8 @@ function EcommerceElementsPage({ previewImage, faceImage, sceneImage, replaceShe
           <div className="ecommerce-elements-list">
             {[
               { src: previewImage, label: '商品主体', large: true, onClick: onOpenObjectPicker },
-              { src: faceImage, label: '人物元素', onClick: onOpenFaceSheet },
-              { src: sceneImage, label: '场景元素', onClick: onOpenSceneSheet },
+              { src: faceImage, label: '模特', onClick: onOpenFaceSheet },
+              { src: sceneImage, label: '场景', onClick: onOpenSceneSheet },
             ].map((item) => (
               <div className={`ecommerce-elements-card${item.large ? ' is-large' : ''}`} key={item.label}>
                 <button className="ecommerce-elements-thumb-wrap" onClick={item.onClick} type="button">
